@@ -1,0 +1,33 @@
+{
+  "name": "choo-time-examples",
+  "version": "0.0.0",
+  "description": "Created with choo-cli",
+  "license": "MIT",
+  "scripts": {
+    "build:prod": "scripts/build-prod.sh",
+    "deploy": "npm run build:prod && surge dist -d choo-time.surge.sh",
+    "start": "budo ./client.js --live --pushstate -- -g es2040",
+    "lint": "standard --verbose | snazzy",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "choo": "^3.3.0",
+    "choo-time": "0.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "budo": "8.3.0",
+    "es2040": "1.2.2",
+    "envify": "^3.4.1",
+    "standard": "^7.1.2",
+    "snazzy": "^4.0.0",
+    "uglifyify": "^3.0.2",
+    "unassertify": "^2.0.3",
+    "yo-yoify": "^3.3.0"
+  },
+  "standard": {
+    "ignore": [
+      "scripts"
+    ]
+  }
+}
